@@ -18,12 +18,13 @@ struct Story {
 
 struct StoryPage {
     let text: String
-    
     let choices: [Choice]
+    let imageName: String?
     
-    init(_ text: String, choices: [Choice]) {
+    init(_ text: String, choices: [Choice], imageName: String? = nil) {
         self.text = text
         self.choices = choices
+        self.imageName = imageName
     }
 }
 

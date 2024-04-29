@@ -10,15 +10,24 @@ import SwiftUI
 
 struct StoryPageView: View {
 
-
     let story: Story
     let pageIndex: Int
 
 
     var body: some View {
-        VStack {
+        VStack (spacing: 20){
             ScrollView {
                 Text(story[pageIndex].text)
+            }
+        
+            Spacer() // Adds flexible space between the text and the image
+            
+            // Display image if available for the current page
+            if let imageName = story[pageIndex].imageName {
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxHeight: 200) // Limit the image height
             }
             
             ForEach(story[pageIndex].choices, id: \Choice.text) { choice in
@@ -35,13 +44,6 @@ struct StoryPageView: View {
         .padding()
         .navigationTitle("Page \(pageIndex + 1)")
         .navigationBarTitleDisplayMode(.inline)
-        
-        if Choice(text: "Front row!", destination: 1)
-{            Image()
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding()
-        }
     }
 }
 
