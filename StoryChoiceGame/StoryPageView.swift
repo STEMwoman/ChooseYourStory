@@ -35,6 +35,12 @@ struct StoryPageView: View {
         .padding()
         .navigationTitle("Page \(pageIndex + 1)")
         .navigationBarTitleDisplayMode(.inline)
+        
+        if Choice(text: "Front row!")
+            Image()
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
     }
 }
 
