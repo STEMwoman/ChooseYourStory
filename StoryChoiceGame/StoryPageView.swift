@@ -36,11 +36,12 @@ struct StoryPageView: View {
         .navigationTitle("Page \(pageIndex + 1)")
         .navigationBarTitleDisplayMode(.inline)
         
-        if Choice(text: "Front row!")
-            Image()
+        if Choice(text: "Front row!", destination: 1)
+{            Image()
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding()
+        }
     }
 }
 
