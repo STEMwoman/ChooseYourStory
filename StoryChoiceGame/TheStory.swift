@@ -12,7 +12,7 @@ let story = Story(pages: [
     StoryPage( // 0
         """
         Welcome to Choose Your Own Story
-        Horror
+        🔪 Horror Movie 👻
         
         You enter a local baking competition at the county fair 🎪. It’s a beautiful summer day and you are excited! When you enter the room, you look around to see ten identical stations.
         
