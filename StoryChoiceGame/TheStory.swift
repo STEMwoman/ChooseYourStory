@@ -48,15 +48,6 @@ let story = Story(pages: [
             Choice(text: "Keep reading the book.", destination: 3),
         ]
     ),
-    StoryPage( // Page 8
-            """
-            Struggling against the invisible force, you manage to break free. The hooded figure notices and vanishes into thin air, leaving behind a key. Picking it up, you notice it's labeled 'Vault'. Where do you use it?
-            """,
-            choices: [
-                Choice(text: "Try it on a locked door in the main hall.", destination: 13),
-                Choice(text: "Go back to the forbidden section.", destination: 3),
-            ]
-        ),
         StoryPage( // Page 9
             """
             You continue to listen, hypnotized by the tale. As the final words are spoken, reality shifts—you are no longer in the library, but in a ghostly realm. A spectral librarian asks if you wish to return or stay. What is your choice?
