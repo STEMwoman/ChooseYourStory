@@ -13,17 +13,16 @@ struct StoryView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-                // Background image layer
-                Image("background")
-                    .resizable()  // Allow image resizing
-                    .aspectRatio(contentMode: .fill)  // Fill the view while maintaining aspect ratio
+            ZStack (alignment: .top){
+                Color.black
                     .edgesIgnoringSafeArea(.all)  // Ensure it covers the full screen, including the safe area
                 
                 // Content layer
                 StoryPageView(story: story, pageIndex: 0)
+                    .frame(maxWidth:    .infinity, maxHeight: .infinity)
             }
         }
+        foregroundColor(.white)
     }
     
     

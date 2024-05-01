@@ -18,7 +18,7 @@ let story = Story(pages: [
             Choice(text: "Explore the dusty archives", destination: 3),
             Choice(text: "Check out the forgotten section.", destination: 1),
         ],
-        imageName: "book"
+        imageName: "dark-library"
     ),
     StoryPage( // page 1
         """
