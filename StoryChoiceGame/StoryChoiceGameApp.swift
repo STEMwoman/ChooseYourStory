@@ -11,7 +11,10 @@ import SwiftUI
 struct StoryChoiceGameApp: App {
     var body: some Scene {
         WindowGroup {
-            StoryView()
+            NavigationStack {
+                StoryView()
+                    .background(Color.black.edgesIgnoringSafeArea(.all))
+            }
         }
     }
 }

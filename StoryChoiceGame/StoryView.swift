@@ -22,7 +22,7 @@ struct StoryView: View {
                     .frame(maxWidth:    .infinity, maxHeight: .infinity)
             }
         }
-        foregroundColor(.white)
+        
     }
     
     
