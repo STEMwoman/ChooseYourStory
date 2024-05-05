@@ -18,7 +18,7 @@ let story = Story(pages: [
             Choice(text: "Explore the dusty archives", destination: 3),
             Choice(text: "Check out the forgotten section.", destination: 1),
         ],
-        imageName: "dark-library"
+        imageName: "door-to-library"
     ),
     StoryPage( // page 1
         """
@@ -26,7 +26,8 @@ let story = Story(pages: [
         """,
         choices: [
             Choice(text: "Open the book.", destination: 2),
-        ]
+        ],
+        imageName: "forgotten-place"
     ),
     StoryPage( // page 2
         """
@@ -34,7 +35,8 @@ let story = Story(pages: [
         """,
         choices: [
             Choice(text: "Investigate the noise.", destination: 3),
-        ]
+        ],
+        imageName: "book"
     ),
     StoryPage( // page 3
         """
@@ -44,7 +46,8 @@ let story = Story(pages: [
             Choice(text: "Investigate further.", destination: 14),
             Choice(text: "Pull out your phone and try to call for help.", destination: 5),
             Choice(text: "Look around", destination: 12)
-        ]
+        ],
+        imageName: "pool-of-blood"
     ),
     StoryPage( // page 4
         """
@@ -54,7 +57,8 @@ let story = Story(pages: [
         choices: [
             Choice(text: "Look for another escape route.", destination: 6),
             Choice(text: "Prepare to confront the figure.", destination: 8),
-        ]
+        ],
+        imageName: "quiet-room"
     ),
     StoryPage( // page 5
         """
@@ -63,7 +67,8 @@ let story = Story(pages: [
         choices: [
             Choice(text: "You duck and run!", destination: 4),
             Choice(text: "You hesitate and the axe comes flying at you.", destination: 7),
-        ]
+        ],
+        imageName: "swinging-axe"
     ),
     StoryPage( // page 6
         """
@@ -72,37 +77,43 @@ let story = Story(pages: [
         choices: [
             Choice(text: "Left", destination: 10),
             Choice(text: "Right", destination: 11),
-        ]
+        ],
+        imageName: "climbing-into-ceiling"
     ),
     StoryPage( // Page 7
         """
         You die a gruesome death. Game over!
         """,
-        choices: []
+        choices: [],
+        imageName: "figure-with-axe3"
     ),
     StoryPage( // Page 8
         """
         The figure bursts through the door with the axe. You jump back and swing your notebook. The figure deflects it and slashes at you. Everything goes black as you feel the axe slice through you.
         """,
-        choices: []
+        choices: [],
+        imageName: "swinging-notebook2"
     ),
     StoryPage( // Page 9
         """
         The figure bursts through the door with the axe. You jump back but it's too late. Everything goes black as you feel the axe slice through you.
         """,
-        choices: []
+        choices: [],
+        imageName: "axe-kill"
     ),
     StoryPage( // Page 10
             """
             You keep crawling until you reach another vent. You kick through the vent and drop down into the hall outside the library. You take off sprinting and bust through the door to get outside. You keep running and never look back.
             """,
-            choices: []
+            choices: [],
+            imageName: "man-running-outside"
         ),
     StoryPage( // Page 11
            """
            You start crawling as fast as you can, but you fall through the vent and come crashing down onto a table. You wake up sometime later with the figure looming over you. The figure swngs the axe and it cuts right through you.
            """,
-           choices: []
+           choices: [],
+           imageName: "cowering-on-floor"
        ),
     StoryPage( // Page 12
                 """
@@ -111,7 +122,8 @@ let story = Story(pages: [
                 choices: [
                     Choice(text: "Call out", destination: 13),
                     Choice(text: "Walk into the darkness", destination: 14),
-                ]
+                ],
+                imageName: "movement"
             ),
     StoryPage( // Page 13
                 """
@@ -120,13 +132,15 @@ let story = Story(pages: [
                 choices: [
                     Choice(text: "Go over to the table", destination: 15),
                     Choice(text: "Call out again", destination: 16),
-                ]
+                ],
+                imageName: "notebook"
             ),
     StoryPage( // Page 14
                 """
                     You walk into the darkesss and get deeper into the aisles of books. You turn down an aisle and suddenly tumble to the floor. You look back and see a body surrounded by blood. You stare in horror, not noticing the figure looming over you. The figure lifts their axe and everything goes black.
                 """,
-                choices: []
+                choices: [],
+                imageName: "man-on-floor2"
             ),
     StoryPage( // Page 15
                 """
@@ -135,13 +149,15 @@ let story = Story(pages: [
                 choices: [
                     Choice(text: "Open it", destination: 17),
                     Choice(text: "Don't open it", destination: 18),
-                ]
+                ],
+                imageName: "holding-notebook"
             ),
     StoryPage( // Page 16
                 """
                     'Helllooooo?' Something moves behind you... you spin around and raise your arms as the axe comes down.
                 """,
-                choices: []
+                choices: [],
+                imageName: "arms-up"
             ),
     StoryPage( // Page 17
                 """
@@ -150,13 +166,15 @@ let story = Story(pages: [
                 choices: [
                     Choice(text: "Put the journal down.", destination: 19),
                     Choice(text: "Take the journal", destination: 20),
-                ]
+                ],
+                imageName: "open-notebook"
             ),
     StoryPage( // Page 18
                 """
                     You turn back to the aisles where you saw movement and see the figure racing towards you with an axe. You start running. You slam against the main door and pull frantically against the handle. The door is locked. You turn around as the killer swings his axe. Game overrr.
                 """,
-                choices: []
+                choices: [],
+                imageName: "locked-door4"
             ),
     StoryPage( // Page 19
                 """
@@ -165,18 +183,21 @@ let story = Story(pages: [
                 choices: [
                     Choice(text: "Run to the window", destination: 21),
                     Choice(text: "You run to the main door", destination: 18),
-                ]
+                ],
+                imageName: "running4"
             ),
     StoryPage( // Page 20
                 """
                    You hold the journal in your hands and flip through the pages. You hear something creak above you. You turn around and see a figure leap off the bookshelf and knocks you to the ground. The figure leaps up and slashes you with their axe.
                 """,
-                choices: []
+                choices: [],
+                imageName: "cloaked-figure-with-axe"
             ),
     StoryPage( // Page 21
                 """
                     You see an open window. You dive towards the window and land on the grass outside. You jump up and keep running and never look back.
                 """,
-                choices: []
+                choices: [],
+                imageName: "jumping-out-window2"
             ),
 ])
