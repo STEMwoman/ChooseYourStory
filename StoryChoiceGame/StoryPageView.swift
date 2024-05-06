@@ -7,20 +7,24 @@
 
 import SwiftUI
 
-
+// A view for displaying a single page of a story
 struct StoryPageView: View {
     
-    
+    // The story data containing all pages
     let story: Story
+    // The index of the current page to display
     let pageIndex: Int
     
     
     var body: some View {
         ZStack(alignment: .top) {
+            // Sets the background color to black and makes it cover the entire safe area.
             Color.black.edgesIgnoringSafeArea(.all)  //Black background for every story page
             
             VStack (spacing: 0){
+                // A scrollable container allowing the text content to be scrolled.
                 ScrollView {
+                    // Displays the story text with specified font and padding.
                     Text(story[pageIndex].text)
                         .foregroundColor(.white)
                         .font(.custom("Baskerville Old Face", size: 16))
@@ -38,6 +42,7 @@ struct StoryPageView: View {
                         .padding(.vertical, 5) // Minimal padding around the image to prevent it from touching adjacent elementsl padding around the image to prevent it from touching adjacent elements
                 }
                 
+                // Loops through the choices and creates a navigation link for each one.
                 ForEach(story[pageIndex].choices, id: \Choice.text) { choice in
                     NavigationLink(destination: StoryPageView(story: story, pageIndex: choice.destination)) {
                         Text(choice.text)
@@ -52,24 +57,24 @@ struct StoryPageView: View {
                 }
             }
             .padding(.bottom)
-            .navigationTitle("Page \(pageIndex + 1)")
+            .navigationTitle("Page \(pageIndex + 1)") // Sets the navigation bar title
             .navigationBarTitleDisplayMode(.inline)
         }
     }
     
-    
+    // Provides a preview of the StoryPageView
     struct NonlinearStory_Previews: PreviewProvider {
         static var previews: some View {
-            // Step 1: Create a sample choice
+            // Create a sample choice
             let sampleChoice = Choice(text: "Next", destination: 0) // Assuming destination 0 loops back for simplicity in preview
             
-            // Step 2: Create a sample story page using the choice
+            // Create a sample story page using the choice
             let samplePage = StoryPage( "Example text for preview", choices: [sampleChoice], imageName: "YourImageName") // Use an appropriate image name or `nil`
             
-            // Step 3: Create a story instance containing the page
+            // Create a story instance containing the page
             let sampleStory = Story(pages: [samplePage])
             
-            // Step 4: Provide the StoryPageView with the sample story and an index to preview
+            // Provide the StoryPageView with the sample story and an index to preview
             StoryPageView(story: sampleStory, pageIndex: 0)
         }
     }
