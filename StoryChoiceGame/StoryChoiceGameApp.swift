@@ -2,7 +2,7 @@
 //  StoryChoiceGameApp.swift
 //  StoryChoiceGame
 //
-//  Created by COOPER, ALYSSA J. on 4/24/24.
+//  Created by COOPER, ALYSSA J. and MELISSA MIKA on 4/24/24.
 //
 
 import SwiftUI
